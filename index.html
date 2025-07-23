@@ -3,15 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- allow all robots: -->
+  <meta name="robots" content="index,follow">
   <title>TourRadar Destinations</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
-    .destination { border-bottom: 1px solid #ddd; padding: 15px 0; }
-    .destination h2 { margin: 0 0 5px; }
-    .destination p { margin: 5px 0; }
-    .destination a { color: #0066cc; text-decoration: none; }
-    .destination a:hover { text-decoration: underline; }
-  </style>
+
+  <!-- human‐readable CSS omitted… -->
+
+  <!-- point bots at your JSON feed: -->
+  <link rel="alternate"
+        type="application/json"
+        href="data.json"
+        title="TourRadar Destinations JSON"/>
+
+  <!-- JSON‑LD structured data for Bing & Google: -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "TourRadar Destinations",
+    "url": "https://enriched-ai.github.io/TourRadar_html/",
+    "itemListElement": [
+      {% for item in site.data.destinations %}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index }},
+        "name": "{{ item.country | escape }}",
+        "url": "{{ item.url }}"
+      }{% if forloop.last == false %},{% endif %}
+      {% endfor %}
+    ]
+  }
+  </script>
 </head>
 <body>
   <h1>TourRadar Destinations</h1>
