@@ -1,3 +1,3 @@
 User-agent: *
-Allow: /
+Allow: /TourRadar_html/
 Sitemap: https://enriched-ai.github.io/TourRadar_html/sitemap.xml
