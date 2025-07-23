@@ -1,0 +1,9 @@
+# TourRadar Destinations
+> Curated list of 100+ countries with affiliate‑prefixed URLs.
+
+- **Africa**: Algeria, Angola, …, Zimbabwe  
+- **Asia**: Armenia, Azerbaijan, …, Vietnam  
+- **Oceania**: Australia, Fiji, …, Papua New Guinea  
+- **Europe**: Albania, Andorra, …, Wales  
+- **North America**: USA, Canada, Greenland  
+- **Latin America**: Argentina, Brazil, …, Uruguay
